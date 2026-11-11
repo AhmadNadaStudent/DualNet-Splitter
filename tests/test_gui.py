@@ -310,8 +310,8 @@ class CanvasTests(unittest.TestCase):
                     bounds = app.cv.bbox(item)
                     if bounds:
                         self.assertGreaterEqual(bounds[1], -1)
-                        self.assertLessEqual(bounds[3], gui.COMPACT_H * app.S + 1)
-                        self.assertLessEqual(bounds[2], gui.COMPACT_W * app.S + 1)
+                        self.assertLessEqual(bounds[3], round(gui.COMPACT_H * app.S) + 1)
+                        self.assertLessEqual(bounds[2], round(gui.COMPACT_W * app.S) + 1)
 
 
 if __name__ == "__main__":

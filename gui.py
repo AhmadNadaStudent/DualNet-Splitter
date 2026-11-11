@@ -111,7 +111,7 @@ class DualNetApp:
 
         sw, sh = self.root.winfo_screenwidth(), self.root.winfo_screenheight()
         width, height = (COMPACT_W, COMPACT_H) if self.compact else (W, H)
-        pw, ph = int(width * self.S), int(height * self.S)
+        pw, ph = round(width * self.S), round(height * self.S)
         self.root.geometry(f"{pw}x{ph}+{(sw - pw) // 2}+{max(0, (sh - ph) // 2 - 20)}")
 
         self.cv = tk.Canvas(self.root, width=pw, height=ph, bg=self.colors["bg"], highlightthickness=0, bd=0)
